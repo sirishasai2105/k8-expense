@@ -17,11 +17,12 @@ metadata:
     tier: api
 spec:
   replicas: 2
-  matchLabels: 
-    project: expense
-    environment: dev
-    module: backend
-    tier: api
+  selector:
+    matchLabels: 
+      project: expense
+      environment: dev
+      module: backend
+      tier: api
   template:
     metadata:
       labels:
@@ -33,7 +34,9 @@ spec:
       containers:
       - name: backend
         image: sirishasai2105/backend:v1
-
+        envFrom:
+        - configMapRef:
+            name: backend
 ---
 kind: Service
 apiVersion: v1
