@@ -38,10 +38,10 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-   project: expense
-   environment: dev
-   module: frontend      
-   tier: web
+     project: expense
+     environment: dev
+     module: frontend      
+     tier: web
 ports:
 - name: frontend-svc
   protocol: TCP
