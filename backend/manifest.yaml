@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: backend
 data:
-  ENV_HOST=mysql
+  DB_HOST=mysql"
 
 ---
 kind: Deployment
