@@ -39,7 +39,7 @@ spec:
     module: mysql
     tier: db
   ports:
-    name: mysql-svc
+  - name: mysql-svc
     protocol: TCP
     port: 3306
     targetPort: 3306
