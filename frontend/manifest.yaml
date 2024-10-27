@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: frontend
   namespace: expense
-  label:
+  labels:
     project: expense
     environment: dev
     module: frontend
