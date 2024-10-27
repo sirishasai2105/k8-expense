@@ -52,7 +52,7 @@ spec:
     module: backend
     tier: api
   ports:
-    name: backend-svc
+  - name: backend-svc
     protocol: TCP
     port: 8080
     targetPort: 8080
