@@ -44,7 +44,7 @@ spec:
     module: frontend      
     tier: web
   ports:
-  - name: frontend-svc
+  - name: frontend
     protocol: TCP
     port: 80
     targetPort: 80

@@ -43,7 +43,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: backend-svc
+  name: backend
   namespace: expense
 spec:
   selector:
@@ -52,7 +52,7 @@ spec:
     module: backend
     tier: api
   ports:
-  - name: backend-svc
+  - name: backend
     protocol: TCP
     port: 8080
     targetPort: 8080
