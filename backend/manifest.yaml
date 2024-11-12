@@ -33,6 +33,10 @@ spec:
         module: backend
         tier: api
     spec:
+      initContainers:
+      - name: mysql-check
+        image: busybox:1.28
+        command: ['sh', '-c', "until nslookup mysql; do echo waiting for myservice; sleep 2; done"]
       containers:
       - name: backend
         image: sirishasai2105/backend:v1
