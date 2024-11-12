@@ -27,6 +27,16 @@ spec:
       containers:
       - name: nginx
         image: sirishasai2105/mysql:v1
+        readinessProbe:
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 15
+          periodSeconds: 10
 
 ---
 kind: Service
