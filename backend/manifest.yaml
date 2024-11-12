@@ -36,6 +36,17 @@ spec:
       containers:
       - name: backend
         image: sirishasai2105/backend:v1
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 3
         resources:
           requests:
             cpu: 100m
